@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+:root{
+    --primary-font: "Gamja Flower", sans-serif;
+    --background:url("../Images/background.png");
+    --filter-img: url(../Images//filterbuttonbackground.jpg);
+    --semi-transprant-background: rgba(255, 255, 255, 0.8);
+    --box-shadow: 2px 2px 7px 1px rgba(0,0,0,0.2)
+}
+
+
 /*Myers Reset */
 
 html, body, div, span, applet, object, iframe,
@@ -44,7 +55,7 @@ table {
 	border-spacing: 0;
 }
 body {
-    background-image:url("../Images/background.png");
+    background-image:var(--background);
     background-size: 100%;
     
 }
@@ -56,8 +67,8 @@ body {
     align-items: center;           /* vertically center everything */
     padding: 0 20px;               /* some spacing on the sides */
     height: 60px;                 
-    background-color: rgba(255, 255, 255, 0.8); /* semi-transparent nav bar */
-    box-shadow: 2px 2px 7px 1px rgba(0,0,0,0.2);
+    background-color:var(--semi-transprant-background); /* semi-transparent nav bar */
+    box-shadow: var(--box-shadow);
 }
 .nav-bar nav {
     display: flex;
@@ -73,7 +84,8 @@ a {
     border-radius: 50px;
     height: 40px;
     width: 140px;
-    font-size: 15px;
+    font-size: 20px;
+    font-family: var(--primary-font);
     justify-content: center;
     align-items: center;
     
@@ -89,9 +101,101 @@ a:hover{
 }
 
 
-.profile-pic {
+.profilePic {
     height: 45px;
     width: 45px;
     border-radius: 50%; /* makes it circular */
     object-fit: cover;  /* ensures image fills container nicely */
 }
+
+/* Home Page Body */
+
+.titleBox{
+    border: 1px solid transparent;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 600px;
+    height: auto;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.title{
+    font-size: 70px;
+    font-family: var(--primary-font)
+}
+
+/*Filter */
+
+.filterButton{
+   width: 100px;
+   border: none;
+   cursor: pointer;
+   height: 40px;
+   border-radius: 25px;
+   margin-top: 20px;
+   font-size: 20px;
+   font-family: var(--primary-font);
+   background-color: #ff8acf;
+   box-shadow: 0 4px 10px rgba(255, 138, 207, 0.4);
+   transition:all 0.2 ease
+
+}
+
+.filterButton:hover{
+    background-color: #ff70c4;
+    transform: translateY(-2px);
+    box-shadow: 0 0px 14px rgba(255, 138, 207, 0.6);
+}
+
+
+
+.transactionBody{
+   
+    width: 43em;
+    height: auto;
+    margin-left: 50px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    
+}
+/* date of transaction*/
+
+.date{
+   
+    width: 200px;
+    height: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-family: var(--primary-font);
+    font-size: 25px;
+}
+
+/* styles dealing with inside of transactionBox*/
+.transactionInfo{
+    margin: 10px;
+    height: 50px;
+    width: 500px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    background-color:var(--semi-transprant-background); /* semi-transparent nav bar */
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    
+}
+
+.purchaseReason{
+    font-family: var(--primary-font);
+    font-size: 18px;
+}
+
+.tagsBox{
+    font-family: var(--primary-font);
+    font-size: 18px;
+    margin-left: 325px;
+}   
+
