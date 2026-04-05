@@ -6,7 +6,9 @@
     --filter-img: url(../Images//filterbuttonbackground.jpg);
     --semi-transprant-background: rgba(255, 255, 255, 0.8);
     --box-shadow: 2px 2px 7px 1px rgba(0,0,0,0.2)
+    
 }
+
 
 
 /*Myers Reset */
@@ -30,6 +32,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+   
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -76,7 +79,7 @@ body {
 }
 
 
-a {
+.nav-styles {
     color: black;
     text-decoration: none;
     background-color: transparent;
@@ -92,7 +95,7 @@ a {
 }
 
 
-a:hover{
+.nav-styles:hover{
     background-image: linear-gradient(
         rgba(197, 130, 220, 0.8),
         rgba(225, 129, 241, 0.8)
@@ -110,6 +113,17 @@ a:hover{
 
 /* Home Page Body */
 
+.mainLayout {
+    border: 1px solid black;
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
 .titleBox{
     border: 1px solid transparent;
     display: inline-flex;
@@ -155,7 +169,6 @@ a:hover{
     width: 43em;
     height: auto;
     margin-left: 50px;
-    margin-top: 10px;
     display: flex;
     align-items: center;
     flex-direction:column;
@@ -167,7 +180,7 @@ a:hover{
    
     width: 200px;
     height: auto;
-    margin-top: 100px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     font-family: var(--primary-font);
@@ -198,4 +211,43 @@ a:hover{
     font-size: 18px;
     margin-left: 325px;
 }   
+
+
+
+.accountBox{
+    border: 1px solid black;
+    display: inline-flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    margin-left: 150px; 
+    margin-bottom: 200px;
+    
+}
+
+
+.accountTitle{
+    font-family: var(--primary-font);
+    font-size: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addAccountButton{
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    margin-right: 50px;
+    cursor: pointer;
+    font-family: var(--primary-font);
+}
+
+.AccountList{
+    margin-top: 20px;
+    font-family: var(--primary-font);
+    font-size: 35px;
+    display: flex;
+   
+    flex-direction: column;
+}
 
